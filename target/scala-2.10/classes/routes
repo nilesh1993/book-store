@@ -1,0 +1,40 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Application.index
+
+
+GET      /addData                   controllers.add.renderAddPage
+
+POST     /addData                   controllers.add.add
+
+
+GET      /deleteData                controllers.delete.renderDeletePage
+
+POST     /deleteData                controllers.delete.delete
+
+
+
+GET      /searchData                controllers.search.renderSearchPage
+
+GET     /searchD/:id/:value         controllers.search.search(id:String, value:String)
+
+
+
+GET      /updateData                controllers.update.renderUpdatePage
+
+GET     /updateD/:id/:value          controllers.search.search(id:String, value:String)
+
+POST     /updateData                    controllers.update.update
+
+
+#GET     /searchData/searchResult     controllers.search.search(id:String)
+
+
+#POST     /next                       controllers.Render.renderPage
+
+GET       /assets/*file                controllers.Assets.at(path="/public", file)
+
+#GET     /query-builder              controllers.Search.launchQueryBuilder
